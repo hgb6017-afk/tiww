@@ -1,0 +1,35 @@
+name: Build RootHide DEB
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Theos
+        uses: waruhachi/theos-action@v2.4.6
+        with:
+          theos-src: 'roothide/theos'
+          theos-branch: 'master'
+          sdks-src: 'theos/sdks'
+          sdks-branch: 'master'
+          orion: 'false'
+
+      - name: Build RootHide package
+        run: |
+          make clean
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide
+
+      - name: Upload DEB
+        uses: actions/upload-artifact@v4
+        with:
+          name: DLSLiteFX-RootHide
+          path: packages/*.deb
+          if-no-files-found: error
