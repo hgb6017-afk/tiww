@@ -1,0 +1,6 @@
+scale=55
+disable_shadows=1
+disable_crowd=1
+disable_weather=1
+disable_grass=1
+disable_bloom=1

@@ -1,0 +1,9 @@
+Package: com.openai.dlslowres
+Name: DLS LiteFX
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Description: DLS26 per-app low-resolution + experimental Metal draw filter for shadows, crowd, weather, grass and bloom.
+Maintainer: Local build
+Author: OpenAI
+Section: Tweaks
+Depends: mobilesubstrate

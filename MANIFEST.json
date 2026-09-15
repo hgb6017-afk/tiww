@@ -1,0 +1,21 @@
+{
+  "package_id": "com.openai.dlslowres",
+  "version": "2.0.0",
+  "jailbreak": "Dopamine RootHide",
+  "bundle_filter": "com.firsttouch.dls7",
+  "confirmed_feature": "CAMetalLayer drawable scaling",
+  "experimental_feature": "Metal pipeline name classifier + selective draw skipping",
+  "default_config": {
+    "scale": 55,
+    "disable_shadows": true,
+    "disable_crowd": true,
+    "disable_weather": true,
+    "disable_grass": true,
+    "disable_bloom": true
+  },
+  "status_files": [
+    "Documents/dlslite_drawable.txt",
+    "Documents/dlslite_status.txt",
+    "Documents/dlslite_pipelines.txt"
+  ]
+}
